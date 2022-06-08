@@ -5,6 +5,7 @@ import { FaTachometerAlt } from "react-icons/fa";
 import { AiOutlineAreaChart } from "react-icons/ai";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
+import img from "../Assets/earl-newell-2021-09-08-02-06-31-6093.jpg";
 const Dashboard = () => {
   return (
     <div>
@@ -35,9 +36,12 @@ const Dashboard = () => {
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle " />
           <div className="drawer-content ">
             {/* <!-- Page content here --> */}
-            <h2 className="text-3xl font-semibold text-primary text-center my-3">
-              Welcome to Your Dashboard
-            </h2>
+            <div className="flex  mx-auto text-accent">
+              <div className="ml-auto border-l-2 flex my-4 pl-4 py-2 mr-4">
+                <p className="mr-3">Psyber.co</p>
+                <img className="w-[32px] rounded-full" src={img} alt="" />
+              </div>
+            </div>
             <Outlet></Outlet>
           </div>
           <div className="drawer-side min-h-screen overflow-hidden">
