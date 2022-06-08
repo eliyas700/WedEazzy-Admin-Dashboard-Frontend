@@ -274,7 +274,7 @@ const Dashboard = () => {
                 </div>
               </li>
               <li>
-                <Link to="/dashboard/admin">
+                <Link to="/admin">
                   <AiOutlineAreaChart className="text-white" size={20} /> Admin
                 </Link>
               </li>
