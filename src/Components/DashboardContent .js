@@ -2,6 +2,7 @@ import React from "react";
 import { BsFillCalendarFill } from "react-icons/bs";
 import { FaClipboardList } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
+import MonthlyEarningChart from "./MonthlyEarningChart";
 const DashboardContent = () => {
   return (
     <div className="px-6 py-8 bg-[#f6f6f6] ">
@@ -169,6 +170,10 @@ const DashboardContent = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <MonthlyEarningChart></MonthlyEarningChart>
       </div>
     </div>
   );
