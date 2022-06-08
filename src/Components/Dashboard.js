@@ -1,6 +1,10 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { HiLocationMarker } from "react-icons/hi";
+import { FaTachometerAlt } from "react-icons/fa";
+import { AiOutlineAreaChart } from "react-icons/ai";
+import { AiFillFolderOpen } from "react-icons/ai";
+import { BiChevronDown } from "react-icons/bi";
 const Dashboard = () => {
   return (
     <div>
@@ -27,8 +31,8 @@ const Dashboard = () => {
             </svg>
           </label>
         </div>
-        <div className="drawer drawer-mobile">
-          <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        <div className="drawer drawer-mobile overflow-hidden">
+          <input id="my-drawer-2" type="checkbox" className="drawer-toggle " />
           <div className="drawer-content ">
             {/* <!-- Page content here --> */}
             <h2 className="text-3xl font-semibold text-primary text-center my-3">
@@ -36,9 +40,9 @@ const Dashboard = () => {
             </h2>
             <Outlet></Outlet>
           </div>
-          <div className="drawer-side lg:h-auto ">
+          <div className="drawer-side min-h-screen overflow-hidden">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className="menu p-4 w-48 lg:w-48 bg-primary  text-neutral text-sm ">
+            <ul className="menu p-4 w-48 lg:w-56 bg-primary  text-neutral text-sm ">
               {/* <!-- Sidebar content here --> */}
               <li className="text-lg font-bold flex">
                 {/* <FontAwesomeIcon icon="fa-solid fa-location-dot" /> */}
@@ -50,37 +54,315 @@ const Dashboard = () => {
               </li>
               <li>
                 <Link to="/" className="font-semibold">
-                  Dashboard
+                  <FaTachometerAlt className="text-white" size={20} /> Dashboard
                 </Link>
               </li>
 
               <li>
-                <Link to="/dashboard/listing">Listing</Link>
+                <div class="dropdown relative">
+                  <label tabindex="0" class="flex justify-between items-center">
+                    <AiFillFolderOpen className="text-white mr-3 " size={20} />
+                    Listing
+                    <BiChevronDown className="ml-[70px]" />
+                  </label>
+                  <div
+                    tabindex="0"
+                    class="dropdown-content card card-compact top-0 mt-10 shadow bg-white rounded-sm text-accent min-w-[10rem] mx-0 px-0"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          User Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          My Listening
+                        </Link>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
-                <Link to="/dashboard/pages">Pages</Link>
+                <div class="dropdown relative">
+                  <label tabindex="0" class="flex justify-between items-center">
+                    <AiFillFolderOpen className="text-white mr-3 " size={20} />
+                    Pages
+                    <BiChevronDown className="ml-[74px]" />
+                  </label>
+                  <div
+                    tabindex="0"
+                    class="dropdown-content card card-compact top-0 mt-10 shadow bg-white rounded-sm text-accent min-w-[10rem] mx-0 px-0"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          User Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          My Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Pending
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Categories
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Locations
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Package
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case rounded-none btn-sm font-normal justify-start "
+                        >
+                          Orders
+                        </Link>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
 
               <li>
-                <Link to="/dashboard/seo">Seo Setup</Link>
+                <div class="dropdown relative">
+                  <label tabindex="0" class="flex justify-between items-center">
+                    <AiFillFolderOpen className="text-white mr-3 " size={20} />
+                    Seo Setup
+                    <BiChevronDown className="ml-12" />
+                  </label>
+                  <div
+                    tabindex="0"
+                    class="dropdown-content card card-compact top-0 mt-10 shadow bg-white rounded-sm text-accent min-w-[10rem] mx-0 px-0"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          User Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          My Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Pending
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Categories
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Locations
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Package
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case rounded-none btn-sm font-normal justify-start "
+                        >
+                          Orders
+                        </Link>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
-                <Link to="/dashboard/setting">Setting</Link>
+                <div class="dropdown relative">
+                  <label tabindex="0" class="flex justify-between items-center">
+                    <AiFillFolderOpen className="text-white mr-3 " size={20} />
+                    Setting
+                    <BiChevronDown className="ml-[68px]" />
+                  </label>
+                  <div
+                    tabindex="0"
+                    class="dropdown-content card card-compact top-0 mt-10 shadow bg-white rounded-sm text-accent min-w-[10rem] mx-0 px-0"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          User Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          My Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Pending
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Categories
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Locations
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Package
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case rounded-none btn-sm font-normal justify-start "
+                        >
+                          Orders
+                        </Link>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
-                <Link to="/dashboard/admin">Admin</Link>
+                <Link to="/dashboard/admin">
+                  <AiOutlineAreaChart className="text-white" size={20} /> Admin
+                </Link>
               </li>
               <li>
-                <Link to="/dashboard/manageStuff">Manage Stuff</Link>
+                <Link to="/dashboard/manageStuff">
+                  <AiOutlineAreaChart className="text-white" size={20} />
+                  Manage Stuff
+                </Link>
               </li>
               <li>
-                <Link to="/dashboard/blog">Blog</Link>
+                <div class="dropdown relative">
+                  <label tabindex="0" class="flex justify-between items-center">
+                    <AiFillFolderOpen className="text-white mr-3 " size={20} />
+                    Blog
+                    <BiChevronDown className="ml-[86px]" />
+                  </label>
+                  <div
+                    tabindex="0"
+                    class="dropdown-content card card-compact top-0 mt-10 shadow bg-white rounded-sm text-accent min-w-[10rem] mx-0 px-0"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          User Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          My Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Pending
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Categories
+                        </Link>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
-                <Link to="/dashboard/contact">Contact</Link>
+                <div class="dropdown relative">
+                  <label tabindex="0" class="flex justify-between items-center">
+                    <AiFillFolderOpen className="text-white mr-3 " size={20} />
+                    Contact
+                    <BiChevronDown className="ml-16" />
+                  </label>
+                  <div
+                    tabindex="0"
+                    class="dropdown-content card card-compact top-0 mt-10 shadow bg-white rounded-sm text-accent min-w-[10rem] mx-0 px-0"
+                  >
+                    <div class="card-body">
+                      <ul>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          User Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          My Listening
+                        </Link>
+                        <Link
+                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                        >
+                          Pending
+                        </Link>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
               <li>
-                <Link to="/dashboard/subscriber">Subscriber</Link>
+                <Link to="/dashboard/subscriber">
+                  <AiFillFolderOpen className="text-white" size={20} />
+                  Subscriber
+                </Link>
               </li>
             </ul>
           </div>
