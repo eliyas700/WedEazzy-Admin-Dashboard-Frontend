@@ -6,6 +6,7 @@ import { AiOutlineAreaChart } from "react-icons/ai";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { BiChevronDown } from "react-icons/bi";
 import img from "../Assets/earl-newell-2021-09-08-02-06-31-6093.jpg";
+import AddAdminModal from "./Admin/AddAdminModal";
 const Dashboard = () => {
   return (
     <div>
@@ -79,13 +80,13 @@ const Dashboard = () => {
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          User Listening
+                          User Listing
                         </Link>
                         <Link
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          My Listening
+                          My Listing
                         </Link>
                       </ul>
                     </div>
@@ -109,13 +110,13 @@ const Dashboard = () => {
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          User Listening
+                          User Listing
                         </Link>
                         <Link
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          My Listening
+                          My Listing
                         </Link>
                         <Link
                           to="/"
@@ -170,13 +171,13 @@ const Dashboard = () => {
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          User Listening
+                          User Listing
                         </Link>
                         <Link
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          My Listening
+                          My Listing
                         </Link>
                         <Link
                           to="/"
@@ -230,13 +231,13 @@ const Dashboard = () => {
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          User Listening
+                          User Listing
                         </Link>
                         <Link
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          My Listening
+                          My Listing
                         </Link>
                         <Link
                           to="/"
@@ -301,13 +302,13 @@ const Dashboard = () => {
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          User Listening
+                          User Listing
                         </Link>
                         <Link
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          My Listening
+                          My Listing
                         </Link>
                         <Link
                           to="/"
@@ -343,13 +344,13 @@ const Dashboard = () => {
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          User Listening
+                          User Listing
                         </Link>
                         <Link
                           to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
-                          My Listening
+                          My Listing
                         </Link>
                         <Link
                           to="/"
@@ -372,6 +373,7 @@ const Dashboard = () => {
           </div>
         </div>
       </>
+      <AddAdminModal />
     </div>
   );
 };

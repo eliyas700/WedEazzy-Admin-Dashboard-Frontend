@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GrFormAdd } from "react-icons/gr";
 import img from "../../Assets/earl-newell-2021-09-08-02-06-31-6093.jpg";
+import AddAdminModal from "./AddAdminModal";
+
 const AdminPanel = () => {
+  const [admins, setAdmins] = useState([]);
+  console.log(admins, "From Admin");
+  useEffect(() => {
+    fetch("https://api.wedeazzy.com/api/Admin/")
+      .then((res) => res.json())
+      .then((data) => {
+        setAdmins(data);
+        console.log(data, "Dirt");
+      });
+  }, []);
   return (
     <div className="bg-[#f6f6f6] py-5">
-      <button className="btn bg-primary text-left ml-3 text-info">
+      <label
+        for="add-admin-modal"
+        className="btn bg-primary text-left ml-3 text-info modal-button"
+      >
         New Admin
-      </button>
+      </label>
       <div className="bg-white py-4 ">
         <h2 className="text-primary text-xl bg-[#f3f8f9] px-2 py-3 font-semibold">
           Admin Table{" "}
@@ -42,14 +57,12 @@ const AdminPanel = () => {
                   </tr>
                 </thead>
                 <tbody className="text-accent">
-                  <tr>
-                    <th>1</th>
-                    <td>Psyber co</td>
-                    <td>admin@gmail.com</td>
-                    <td>
-                      <img width={100} src={img} alt="" />
-                    </td>
-                  </tr>
+                  {admins.map((admin, index) => (
+                    <tr key={admin.id}>
+                      <td>{admin.id}</td>
+                      <td>{admin?.Email}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -64,6 +77,7 @@ const AdminPanel = () => {
           </div>
         </div>
       </div>
+      <AddAdminModal />
     </div>
   );
 };
