@@ -4,7 +4,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { FaTachometerAlt } from "react-icons/fa";
 import { AiOutlineAreaChart } from "react-icons/ai";
 import { AiFillFolderOpen } from "react-icons/ai";
-import { BiChevronDown } from "react-icons/bi";
+import { BiCategoryAlt, BiChevronDown } from "react-icons/bi";
 import img from "../Assets/earl-newell-2021-09-08-02-06-31-6093.jpg";
 import AddAdminModal from "./Admin/AddAdminModal";
 const Dashboard = () => {
@@ -60,6 +60,11 @@ const Dashboard = () => {
               <li>
                 <Link to="/" className="font-semibold">
                   <FaTachometerAlt className="text-white" size={20} /> Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link to="/category">
+                  <BiCategoryAlt className="text-white" size={20} /> Categories{" "}
                 </Link>
               </li>
 
