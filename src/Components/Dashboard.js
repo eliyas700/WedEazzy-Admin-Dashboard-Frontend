@@ -7,6 +7,7 @@ import { AiFillFolderOpen } from "react-icons/ai";
 import { BiCategoryAlt, BiChevronDown } from "react-icons/bi";
 import img from "../Assets/earl-newell-2021-09-08-02-06-31-6093.jpg";
 import AddAdminModal from "./Admin/AddAdminModal";
+import { BsTable } from "react-icons/bs";
 const Dashboard = () => {
   return (
     <div>
@@ -65,6 +66,11 @@ const Dashboard = () => {
               <li>
                 <Link to="/category">
                   <BiCategoryAlt className="text-white" size={20} /> Categories{" "}
+                </Link>
+              </li>
+              <li>
+                <Link to="/vendors">
+                  <BsTable className="text-white" size={20} /> Vendors
                 </Link>
               </li>
 

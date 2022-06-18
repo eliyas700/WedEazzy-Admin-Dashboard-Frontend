@@ -7,6 +7,7 @@ import CategoryModal from "./Components/Categories/CategoryModal";
 import Dashboard from "./Components/Dashboard";
 import DashboardContent from "./Components/DashboardContent ";
 import Login from "./Components/Login/Login";
+import Vendors from "./Components/Vendors/Vendors";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<DashboardContent></DashboardContent>}></Route>
           <Route path="admin" element={<AdminPanel></AdminPanel>}></Route>
           <Route path="category" element={<Categories></Categories>}></Route>
+          <Route path="vendors" element={<Vendors></Vendors>}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
