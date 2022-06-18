@@ -48,7 +48,7 @@ const Vendors = () => {
             </tr>
           </thead>
           <tbody>
-            {vendors.map((v) => {
+            {vendors.map((v) => (
               <tr key={v?.id}>
                 <td>{v?.id}</td>
                 <td>{v?.Vendor_name}</td>
@@ -57,8 +57,8 @@ const Vendors = () => {
                 <td>{v?.Vendor_Catogory}</td>
                 <td>{v?.store_name}</td>
                 <td>{v?.Description}</td>
-              </tr>;
-            })}
+              </tr>
+            ))}
           </tbody>
           <tfoot>
             <tr>

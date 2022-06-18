@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const WishList = () => {
+  const [wishLists, setWishlists] = useState([]);
+  useEffect(() => {
+    fetch("http://api.wedeazzy.com/api/Wishlist/")
+      .then((res) => res.json())
+      .then((data) => {
+        setWishlists(data);
+        console.log(wishLists, "wishLists");
+      });
+  }, []);
   return (
     <div>
       <div>
@@ -37,11 +46,15 @@ const WishList = () => {
               </tr>
             </thead>
             <tbody>
-              <td>1</td>
-              <td>Abc</td>
-              <td>def</td>
-              <td>ggfh</td>
-              <td>tryt</td>
+              {wishLists.map((w) => (
+                <tr key={w?.id}>
+                  <td>{w?.id}</td>
+                  <td>{w?.City}</td>
+                  <td>{w?.vendor_catogory}</td>
+                  <td>{w?.Couple_Id}</td>
+                  <td>{w?.Vendor_Id}</td>
+                </tr>
+              ))}
             </tbody>
             <tfoot>
               <tr>

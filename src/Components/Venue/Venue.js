@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Venue = () => {
+  const [venues, setVenues] = useState([]);
+  useEffect(() => {
+    fetch("http://api.wedeazzy.com/api/Venue/")
+      .then((res) => res.json())
+      .then((data) => {
+        setVenues(data);
+        console.log(venues, "venues");
+      });
+  }, []);
   return (
     <div>
       {" "}
@@ -43,16 +52,20 @@ const Venue = () => {
               </tr>
             </thead>
             <tbody>
-              <td>1</td>
-              <td>Abc</td>
-              <td>def</td>
-              <td>ggfh</td>
-              <td>tryt</td>
-              <td>r45try</td>
-              <td>trygf</td>
-              <td>flgfd</td>
-              <td>flgfd</td>
-              <td>flgfd</td>
+              {venues.map((v) => (
+                <tr key={v?.id}>
+                  <td>{v?.id}</td>
+                  <td>{v?.Venue_name}</td>
+                  <td>{v?.Venue_type_tag2}</td>
+                  <td>{v?.Venue_type_tag3}</td>
+                  <td>{v?.Number_of_guests}</td>
+                  <td>{v?.Food_type}</td>
+                  <td>{v?.Food_Price1}</td>
+                  <td>{v?.rating}</td>
+                  <td>{v?.Location}</td>
+                  <td>{v?.Phone}</td>
+                </tr>
+              ))}
             </tbody>
             <tfoot>
               <tr>

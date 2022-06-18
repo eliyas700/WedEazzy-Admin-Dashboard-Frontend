@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const CouplesTable = () => {
+  const [couples, setCouples] = useState([]);
+  useEffect(() => {
+    fetch("http://api.wedeazzy.com/api/Couple/")
+      .then((res) => res.json())
+      .then((data) => {
+        setCouples(data);
+      });
+  }, []);
   return (
     <div>
       <div>
@@ -41,15 +49,18 @@ const CouplesTable = () => {
               </tr>
             </thead>
             <tbody>
-              <td>1</td>
-              <td>Abc</td>
-              <td>def</td>
-              <td>ggfh</td>
-              <td>tryt</td>
-              <td>r45try</td>
-              <td>trygf</td>
-              <td>flgfd</td>
-              <td>flgfd</td>
+              {couples.map((c) => {
+                <tr>
+                  <td>{c?.id}</td>
+                  <td>{c?.Bride_name}</td>
+                  <td>{c?.Groom_name}</td>
+                  <td>{c?.Email}</td>
+                  <td>{c?.Bride_Phone_number}</td>
+                  <td>{c?.Groom_Phone_number}</td>
+                  <td>{c?.Destination_of_Wedding}</td>
+                  <td>{c?.Budget}</td>
+                </tr>;
+              })}
             </tbody>
             <tfoot>
               <tr>
