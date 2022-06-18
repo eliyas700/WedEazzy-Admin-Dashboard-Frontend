@@ -9,8 +9,11 @@ import CouplesTabel from "./Components/CouplesTable/CouplesTable";
 import Dashboard from "./Components/Dashboard";
 import DashboardContent from "./Components/DashboardContent ";
 import Login from "./Components/Login/Login";
+import Bookings from "./Components/Pages/Bookings";
+import Messages from "./Components/Pages/Messages";
 import Vendors from "./Components/Vendors/Vendors";
 import Venue from "./Components/Venue/Venue";
+import WishList from "./Components/WishList/WishList";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
           <Route path="vendors" element={<Vendors></Vendors>}></Route>
           <Route path="couples" element={<CouplesTable></CouplesTable>}></Route>
           <Route path="venue" element={<Venue></Venue>}></Route>
+          <Route path="wishList" element={<WishList></WishList>}></Route>
+          <Route path="bookings" element={<Bookings></Bookings>}></Route>
+          <Route path="messages" element={<Messages></Messages>}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>

@@ -8,7 +8,8 @@ import { BiCategoryAlt, BiChevronDown } from "react-icons/bi";
 import img from "../Assets/earl-newell-2021-09-08-02-06-31-6093.jpg";
 import AddAdminModal from "./Admin/AddAdminModal";
 import { BsTable } from "react-icons/bs";
-import { MdLocationCity } from "react-icons/md";
+import { MdFavorite, MdLocationCity } from "react-icons/md";
+import { GrFavorite } from "react-icons/gr";
 const Dashboard = () => {
   return (
     <div>
@@ -84,6 +85,11 @@ const Dashboard = () => {
                   <MdLocationCity className="text-white" size={20} /> Venue
                 </Link>
               </li>
+              <li>
+                <Link to="/wishList">
+                  <MdFavorite className="text-white" size={20} /> Wish List
+                </Link>
+              </li>
 
               <li>
                 <div class="dropdown relative">
@@ -129,28 +135,16 @@ const Dashboard = () => {
                     <div class="card-body">
                       <ul>
                         <Link
-                          to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                          to="/bookings"
                         >
-                          User Listing
+                          Bookings
                         </Link>
                         <Link
-                          to="/"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                          to="/messages"
                         >
-                          My Listing
-                        </Link>
-                        <Link
-                          to="/"
-                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
-                        >
-                          Pending
-                        </Link>
-                        <Link
-                          to="/"
-                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
-                        >
-                          Categories
+                          Messages
                         </Link>
                         <Link
                           to="/"
