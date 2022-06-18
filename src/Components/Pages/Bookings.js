@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Bookings = () => {
+  const [bookings, setBookings] = useState([]);
+  useEffect(() => {
+    fetch("http://api.wedeazzy.com/api/Wishlist/")
+      .then((res) => res.json())
+      .then((data) => {
+        setBookings(data);
+        console.log(bookings, "bookings");
+      });
+  }, []);
   return (
     <div>
       <div>
@@ -40,14 +49,18 @@ const Bookings = () => {
               </tr>
             </thead>
             <tbody>
-              <td>1</td>
-              <td>Abc</td>
-              <td>def</td>
-              <td>ggfh</td>
-              <td>tryt</td>
-              <td>tryt</td>
-              <td>tryt</td>
-              <td>tryt</td>
+              {bookings.map((booking) => (
+                <tr key={booking?.id}>
+                  <td>{booking?.id}</td>
+                  <td>{booking?.City}</td>
+                  <td>{booking?.country_vendor}</td>
+                  <td>{booking?.Phone}</td>
+                  <td>{booking?.Date_of_booking}</td>
+                  <td>{booking?.vendor_catogory}</td>
+                  <td>{booking?.Couple_Id}</td>
+                  <td>{booking?.Vendor_Id}</td>
+                </tr>
+              ))}
             </tbody>
             <tfoot>
               <tr>
