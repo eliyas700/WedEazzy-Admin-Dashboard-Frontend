@@ -147,7 +147,13 @@ const Dashboard = () => {
                           Messages
                         </Link>
                         <Link
-                          to="/"
+                          className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
+                          to="/reviews"
+                        >
+                          Reviews
+                        </Link>
+                        <Link
+                          to="/locations"
                           className=" btn w-full normal-case mx-0 rounded-none btn-sm font-normal text-left justify-start"
                         >
                           Locations

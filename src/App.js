@@ -10,7 +10,9 @@ import Dashboard from "./Components/Dashboard";
 import DashboardContent from "./Components/DashboardContent ";
 import Login from "./Components/Login/Login";
 import Bookings from "./Components/Pages/Bookings";
+import Locations from "./Components/Pages/Locations";
 import Messages from "./Components/Pages/Messages";
+import Reviews from "./Components/Pages/Reviews";
 import Vendors from "./Components/Vendors/Vendors";
 import Venue from "./Components/Venue/Venue";
 import WishList from "./Components/WishList/WishList";
@@ -29,6 +31,8 @@ function App() {
           <Route path="wishList" element={<WishList></WishList>}></Route>
           <Route path="bookings" element={<Bookings></Bookings>}></Route>
           <Route path="messages" element={<Messages></Messages>}></Route>
+          <Route path="reviews" element={<Reviews></Reviews>}></Route>
+          <Route path="locations" element={<Locations></Locations>}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
