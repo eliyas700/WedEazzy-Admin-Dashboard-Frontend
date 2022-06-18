@@ -1,6 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Vendors = () => {
+  const [vendors, setVendors] = useState([]);
+  useEffect(() => {
+    fetch("http://api.wedeazzy.com/api/Vendor/")
+      .then((res) => res.json())
+      .then((data) => {
+        setVendors(data);
+      });
+  }, []);
   return (
     <div>
       <div className="p-3">
@@ -38,13 +48,17 @@ const Vendors = () => {
             </tr>
           </thead>
           <tbody>
-            <td>1</td>
-            <td>Abc</td>
-            <td>def</td>
-            <td>ggfh</td>
-            <td>tryt</td>
-            <td>r45try</td>
-            <td>trygf</td>
+            {vendors.map((v) => {
+              <tr key={v?.id}>
+                <td>{v?.id}</td>
+                <td>{v?.Vendor_name}</td>
+                <td>{v?.Phone_number}</td>
+                <td>{v?.City}</td>
+                <td>{v?.Vendor_Catogory}</td>
+                <td>{v?.store_name}</td>
+                <td>{v?.Description}</td>
+              </tr>;
+            })}
           </tbody>
           <tfoot>
             <tr>
