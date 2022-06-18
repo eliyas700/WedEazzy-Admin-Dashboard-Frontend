@@ -374,6 +374,9 @@ const Dashboard = () => {
                   Subscriber
                 </Link>
               </li>
+              <li>
+                <button className="btn btn-primary">Log Out</button>
+              </li>
             </ul>
           </div>
         </div>

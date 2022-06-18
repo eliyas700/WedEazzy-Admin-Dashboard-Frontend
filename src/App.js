@@ -6,6 +6,7 @@ import Categories from "./Components/Categories/Categories";
 import CategoryModal from "./Components/Categories/CategoryModal";
 import Dashboard from "./Components/Dashboard";
 import DashboardContent from "./Components/DashboardContent ";
+import Login from "./Components/Login/Login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="admin" element={<AdminPanel></AdminPanel>}></Route>
           <Route path="category" element={<Categories></Categories>}></Route>
         </Route>
+        <Route path="/login" element={<Login />}></Route>
       </Routes>
       <AddAdminModal />
       <CategoryModal />
