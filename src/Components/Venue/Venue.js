@@ -1,12 +1,13 @@
 import React from "react";
 
-const CouplesTable = () => {
+const Venue = () => {
   return (
     <div>
+      {" "}
       <div>
         <div className="p-3">
           <h2 className="text-primary text-xl bg-[#f3f8f9] px-2 py-3 font-semibold">
-            Couples Table{" "}
+            Venue
           </h2>
           <div className="flex justify-between items-center">
             <div>
@@ -31,13 +32,14 @@ const CouplesTable = () => {
               <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Bride</th>
-                <th>Groom</th>
-                <th>Email</th>
-                <th>Bride Phone</th>
-                <th>Groom Phone</th>
-                <th>Destination</th>
-                <th>Budget</th>
+                <th>Type-2</th>
+                <th>Type-3</th>
+                <th>Guests</th>
+                <th>Food Type</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Location</th>
+                <th>Phone</th>
               </tr>
             </thead>
             <tbody>
@@ -50,18 +52,20 @@ const CouplesTable = () => {
               <td>trygf</td>
               <td>flgfd</td>
               <td>flgfd</td>
+              <td>flgfd</td>
             </tbody>
             <tfoot>
               <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Bride</th>
-                <th>Groom</th>
-                <th>Email</th>
-                <th>Bride Phone</th>
-                <th>Groom Phone</th>
-                <th>Destination</th>
-                <th>Budget</th>
+                <th>Type-2</th>
+                <th>Type-3</th>
+                <th>Guests</th>
+                <th>Food Type</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Location</th>
+                <th>Phone</th>
               </tr>
             </tfoot>
           </table>
@@ -71,4 +75,4 @@ const CouplesTable = () => {
   );
 };
 
-export default CouplesTable;
+export default Venue;

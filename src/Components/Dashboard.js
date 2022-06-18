@@ -8,6 +8,7 @@ import { BiCategoryAlt, BiChevronDown } from "react-icons/bi";
 import img from "../Assets/earl-newell-2021-09-08-02-06-31-6093.jpg";
 import AddAdminModal from "./Admin/AddAdminModal";
 import { BsTable } from "react-icons/bs";
+import { MdLocationCity } from "react-icons/md";
 const Dashboard = () => {
   return (
     <div>
@@ -76,6 +77,11 @@ const Dashboard = () => {
               <li>
                 <Link to="/couples">
                   <BsTable className="text-white" size={20} /> Couples Table
+                </Link>
+              </li>
+              <li>
+                <Link to="/venue">
+                  <MdLocationCity className="text-white" size={20} /> Venue
                 </Link>
               </li>
 

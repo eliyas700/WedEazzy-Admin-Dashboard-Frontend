@@ -10,6 +10,7 @@ import Dashboard from "./Components/Dashboard";
 import DashboardContent from "./Components/DashboardContent ";
 import Login from "./Components/Login/Login";
 import Vendors from "./Components/Vendors/Vendors";
+import Venue from "./Components/Venue/Venue";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="category" element={<Categories></Categories>}></Route>
           <Route path="vendors" element={<Vendors></Vendors>}></Route>
           <Route path="couples" element={<CouplesTable></CouplesTable>}></Route>
+          <Route path="venue" element={<Venue></Venue>}></Route>
         </Route>
         <Route path="/login" element={<Login />}></Route>
       </Routes>
