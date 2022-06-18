@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Messages = () => {
+  const [messages, setMessages] = useState([]);
+  useEffect(() => {
+    fetch("http://api.wedeazzy.com/api/Message/")
+      .then((res) => res.json())
+      .then((data) => {
+        setMessages(data);
+        console.log(messages, "messages");
+      });
+  }, []);
   return (
     <div>
       {" "}
@@ -39,12 +48,16 @@ const Messages = () => {
               </tr>
             </thead>
             <tbody>
-              <td>1</td>
-              <td>Abc</td>
-              <td>def</td>
-              <td>ggfh</td>
-              <td>tryt</td>
-              <td>tryt</td>
+              {messages.map((message) => (
+                <tr key={message?.id}>
+                  <td>{message?.id}</td>
+                  <td>{message?.Name}</td>
+                  <td>{message?.Email}</td>
+                  <td>{message?.created_at}</td>
+                  <td>{message?.Subject}</td>
+                  <td>{message?.Your_Message}</td>
+                </tr>
+              ))}
             </tbody>
             <tfoot>
               <tr>
