@@ -4,7 +4,6 @@ const Vendors = () => {
   return (
     <div>
       <div className="p-3">
-        {" "}
         <h2 className="text-primary text-xl bg-[#f3f8f9] px-2 py-3 font-semibold">
           Vendors Table{" "}
         </h2>

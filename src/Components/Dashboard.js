@@ -70,7 +70,12 @@ const Dashboard = () => {
               </li>
               <li>
                 <Link to="/vendors">
-                  <BsTable className="text-white" size={20} /> Vendors
+                  <BsTable className="text-white" size={20} /> Vendors Table
+                </Link>
+              </li>
+              <li>
+                <Link to="/couples">
+                  <BsTable className="text-white" size={20} /> Couples Table
                 </Link>
               </li>
 
